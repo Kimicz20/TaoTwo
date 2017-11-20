@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [27/Jul/2017:19:52:58 +0800] "GET /search?query=%20xiaoniu HTTP/1.1" 404 949 http-bio-8083-exec-1 50
+0:0:0:0:0:0:0:1 - - [27/Jul/2017:19:52:59 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8083-exec-3 1

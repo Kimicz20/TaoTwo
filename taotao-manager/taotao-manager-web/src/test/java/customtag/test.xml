@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:myname="http://www.kimi.com/schema/user"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.kimi.com/schema/user
+       http://www.kimi.com/schema/user.xsd">
+
+    <myname:user id="t" username="111" email="222"/>
+
+</beans>
