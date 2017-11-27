@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * Created by geek on 2017/6/12.
  */
+@RequestMapping("page")
 @Controller
 public class PageController {
 

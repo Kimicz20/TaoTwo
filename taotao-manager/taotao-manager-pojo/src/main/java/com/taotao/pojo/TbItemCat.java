@@ -1,8 +1,12 @@
 package com.taotao.pojo;
 
-import java.util.Date;
+import javax.persistence.*;
 
-public class TbItemCat {
+@Table(name="tb_item_cat")
+public class TbItemCat extends BasePojo {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Long parentId;
@@ -14,10 +18,6 @@ public class TbItemCat {
     private Integer sortOrder;
 
     private Boolean isParent;
-
-    private Date created;
-
-    private Date updated;
 
     public Long getId() {
         return id;
@@ -65,21 +65,5 @@ public class TbItemCat {
 
     public void setIsParent(Boolean isParent) {
         this.isParent = isParent;
-    }
-
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-
-    public Date getUpdated() {
-        return updated;
-    }
-
-    public void setUpdated(Date updated) {
-        this.updated = updated;
     }
 }

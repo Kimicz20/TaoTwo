@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="maven-archiver (1)" />
+        <module name="maven-archiver" />
         <module name="maven-archiver (2)" />
         <module name="taotao-common" />
         <module name="taotao-manager-mapper" />
@@ -20,6 +20,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="maven-archiver" target="1.5" />
       <module name="maven-archiver (1)" target="1.5" />
       <module name="maven-archiver (2)" target="1.5" />
       <module name="taotao-common" target="1.8" />

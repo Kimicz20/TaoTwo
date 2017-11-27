@@ -5,9 +5,9 @@ import com.taotao.service.ItemCatService;
 import com.taotao.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -36,11 +36,16 @@ public class ItemController {
         return itemService.getPageList(page,rows);
     }
 
+    /**
+     * 商品类目查询
+     * @param id
+     * @return
+     */
     @RequestMapping("/cat/list")
     @ResponseBody
-    List<EUITreeNode> getCatList(@RequestParam(value = "id",
-                            defaultValue="0")Long id){
-        return itemCatService.getCatList(id);
+        List<EUITreeNode> getCatList(@RequestParam(value = "id",
+                defaultValue="0") Long id){
+        return itemCatService.catList(id);
     }
 
     @RequestMapping(value = "/save",method = RequestMethod.POST)

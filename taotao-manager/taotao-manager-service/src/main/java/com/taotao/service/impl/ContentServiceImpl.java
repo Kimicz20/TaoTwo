@@ -2,9 +2,6 @@ package com.taotao.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.mysql.fabric.xmlrpc.base.Array;
-import com.sun.tools.javac.util.ArrayUtils;
-import com.sun.tools.javac.util.StringUtils;
 import com.taotao.mapper.TbContentMapper;
 import com.taotao.pojo.EUIDataGridResult;
 import com.taotao.pojo.TaotaoResult;
@@ -17,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
