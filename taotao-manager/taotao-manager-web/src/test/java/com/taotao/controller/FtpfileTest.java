@@ -17,7 +17,7 @@ public class FtpfileTest {
     @Test
     public void testFtp() throws Exception {
 
-        InputStream in = ClassLoader.getSystemResourceAsStream("resource/ftp.properties");
+        InputStream in = ClassLoader.getSystemResourceAsStream("config.properties");
         Properties prop = new Properties();
         prop.load(in);
         String PIC_FTP_HOSTNAME = prop.getProperty("PIC_FTP_HOSTNAME");

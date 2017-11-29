@@ -1,17 +1,17 @@
-package com.taotao.pojo;
+package com.taotao.tmp;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class TbItemCatExample {
+public class TbContentCategoryExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public TbItemCatExample() {
+    public TbContentCategoryExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 

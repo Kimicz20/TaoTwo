@@ -2,8 +2,7 @@ package com.taotao.rest.service.impl;
 
 import com.taotao.mapper.TbItemCatMapper;
 import com.taotao.pojo.TbItemCat;
-import com.taotao.pojo.TbItemCatExample;
-import com.taotao.pojo.TbItemCatExample.Criteria;
+import com.taotao.tmp.TbItemCatExample.Criteria;
 import com.taotao.rest.dao.JedisClient;
 import com.taotao.rest.pojo.ItemCatNode;
 import com.taotao.rest.pojo.ItemCatsResult;

@@ -2,7 +2,7 @@ package com.taotao.controller;
 
 import com.taotao.pojo.EUIDataGridResult;
 import com.taotao.pojo.TaotaoResult;
-import com.taotao.pojo.TbContent;
+import com.taotao.tmp.TbContent;
 import com.taotao.service.ContentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

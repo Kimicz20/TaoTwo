@@ -2,9 +2,9 @@ package com.taotao.rest.service.impl;
 
 import com.taotao.mapper.TbContentMapper;
 import com.taotao.pojo.TaotaoResult;
-import com.taotao.pojo.TbContent;
-import com.taotao.pojo.TbContentExample;
-import com.taotao.pojo.TbContentExample.Criteria;
+import com.taotao.tmp.TbContent;
+import com.taotao.tmp.TbContentExample;
+import com.taotao.tmp.TbContentExample.Criteria;
 import com.taotao.rest.dao.JedisClient;
 import com.taotao.rest.service.ContentService;
 import com.taotao.utils.JsonUtils;

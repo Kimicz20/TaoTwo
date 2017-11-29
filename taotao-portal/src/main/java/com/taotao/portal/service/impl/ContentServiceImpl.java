@@ -1,7 +1,7 @@
 package com.taotao.portal.service.impl;
 
 import com.taotao.pojo.TaotaoResult;
-import com.taotao.pojo.TbContent;
+import com.taotao.tmp.TbContent;
 import com.taotao.portal.pojo.ADItem;
 import com.taotao.portal.service.ContentService;
 import com.taotao.utils.HttpClientUtil;

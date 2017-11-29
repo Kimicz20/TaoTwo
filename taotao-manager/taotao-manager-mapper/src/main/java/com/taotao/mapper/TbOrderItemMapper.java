@@ -1,31 +1,11 @@
 package com.taotao.mapper;
 
-import com.taotao.pojo.TbOrderItem;
-import com.taotao.pojo.TbOrderItemExample;
+import com.taotao.tmp.TbOrderItem;
+import com.taotao.tmp.TbOrderItemExample;
 import org.apache.ibatis.annotations.Param;
+import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 
-public interface TbOrderItemMapper {
-    int countByExample(TbOrderItemExample example);
-
-    int deleteByExample(TbOrderItemExample example);
-
-    int deleteByPrimaryKey(String id);
-
-    int insert(TbOrderItem record);
-
-    int insertSelective(TbOrderItem record);
-
-    List<TbOrderItem> selectByExample(TbOrderItemExample example);
-
-    TbOrderItem selectByPrimaryKey(String id);
-
-    int updateByExampleSelective(@Param("record") TbOrderItem record, @Param("example") TbOrderItemExample example);
-
-    int updateByExample(@Param("record") TbOrderItem record, @Param("example") TbOrderItemExample example);
-
-    int updateByPrimaryKeySelective(TbOrderItem record);
-
-    int updateByPrimaryKey(TbOrderItem record);
+public interface TbOrderItemMapper extends Mapper<TbOrderItem> {
 }

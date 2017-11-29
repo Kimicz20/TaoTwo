@@ -1,7 +1,7 @@
 package com.taotao.sso.controller;
 
 import com.taotao.pojo.TaotaoResult;
-import com.taotao.pojo.TbUser;
+import com.taotao.tmp.TbUser;
 import com.taotao.sso.service.UserService;
 import com.taotao.utils.CookieUtils;
 import com.taotao.utils.ExceptionUtil;

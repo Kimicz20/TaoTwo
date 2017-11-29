@@ -2,7 +2,7 @@ package com.taotao.portal.service.impl;
 
 import com.taotao.pojo.TaotaoResult;
 import com.taotao.pojo.TbItemDesc;
-import com.taotao.pojo.TbItemParamItem;
+import com.taotao.tmp.TbItemParamItem;
 import com.taotao.portal.pojo.ItemInfo;
 import com.taotao.portal.service.ItemService;
 import com.taotao.utils.HttpClientUtil;

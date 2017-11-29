@@ -1,6 +1,6 @@
 package com.taotao.portal.service;
 
-import com.taotao.pojo.TbUser;
+import com.taotao.tmp.TbUser;
 
 /**
  * Created by geek on 2017/7/26.

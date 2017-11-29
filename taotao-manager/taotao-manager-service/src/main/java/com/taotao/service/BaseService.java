@@ -62,9 +62,20 @@ public abstract class BaseService<T extends BasePojo> {
      * @return
      */
     public PageInfo<T> queryPageListByWhere(Integer page,Integer rows,T record){
-        //设置分页属性
         PageHelper.startPage(page,rows);
         return new PageInfo<T>(this.queryListByWhere(record));
+    }
+
+    /**
+     * 分页查询
+     * @param page
+     * @param rows
+     * @param example
+     * @return
+     */
+    public PageInfo<T> queryPageListByExample(Integer page,Integer rows,Example example){
+        PageHelper.startPage(page,rows);
+        return new PageInfo<T>(mapper.selectByExample(example));
     }
 
     /**
@@ -139,4 +150,5 @@ public abstract class BaseService<T extends BasePojo> {
     public Integer deleteByWhere(T record){
         return mapper.delete(record);
     }
+
 }

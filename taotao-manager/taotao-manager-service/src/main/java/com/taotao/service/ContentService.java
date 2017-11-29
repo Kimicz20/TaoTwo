@@ -2,7 +2,7 @@ package com.taotao.service;
 
 import com.taotao.pojo.EUIDataGridResult;
 import com.taotao.pojo.TaotaoResult;
-import com.taotao.pojo.TbContent;
+import com.taotao.tmp.TbContent;
 
 /**
  * Created by geek on 2017/6/28.

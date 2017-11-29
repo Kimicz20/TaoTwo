@@ -2,7 +2,9 @@ package com.taotao.service.impl;
 
 import com.taotao.mapper.TbContentCategoryMapper;
 import com.taotao.pojo.*;
-import com.taotao.pojo.TbContentCategoryExample.Criteria;
+import com.taotao.tmp.TbContentCategory;
+import com.taotao.tmp.TbContentCategoryExample;
+import com.taotao.tmp.TbContentCategoryExample.Criteria;
 import com.taotao.service.ContentCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

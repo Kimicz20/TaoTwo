@@ -1,7 +1,7 @@
 package com.taotao.sso.service;
 
 import com.taotao.pojo.TaotaoResult;
-import com.taotao.pojo.TbUser;
+import com.taotao.tmp.TbUser;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

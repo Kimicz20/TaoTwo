@@ -1,6 +1,6 @@
 package com.taotao.portal.interceptor;
 
-import com.taotao.pojo.TbUser;
+import com.taotao.tmp.TbUser;
 import com.taotao.portal.service.impl.UserServiceImpl;
 import com.taotao.utils.CookieUtils;
 import org.apache.commons.lang3.StringUtils;

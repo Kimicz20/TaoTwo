@@ -1,13 +1,16 @@
 package com.taotao.pojo;
 
-import java.util.Date;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-public class TbItemDesc {
+@Table(name = "tb_item_desc")
+public class TbItemDesc extends BasePojo {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long itemId;
-
-    private Date created;
-
-    private Date updated;
 
     private String itemDesc;
 
@@ -17,22 +20,6 @@ public class TbItemDesc {
 
     public void setItemId(Long itemId) {
         this.itemId = itemId;
-    }
-
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-
-    public Date getUpdated() {
-        return updated;
-    }
-
-    public void setUpdated(Date updated) {
-        this.updated = updated;
     }
 
     public String getItemDesc() {

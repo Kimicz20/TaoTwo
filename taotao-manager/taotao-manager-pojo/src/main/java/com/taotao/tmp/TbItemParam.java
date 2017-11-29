@@ -1,11 +1,11 @@
-package com.taotao.pojo;
+package com.taotao.tmp;
 
 import java.util.Date;
 
-public class TbItemParamItem {
-    private Long    id;
+public class TbItemParam {
+    private Long id;
 
-    private Long itemId;
+    private Long itemCatId;
 
     private Date created;
 
@@ -21,12 +21,12 @@ public class TbItemParamItem {
         this.id = id;
     }
 
-    public Long getItemId() {
-        return itemId;
+    public Long getItemCatId() {
+        return itemCatId;
     }
 
-    public void setItemId(Long itemId) {
-        this.itemId = itemId;
+    public void setItemCatId(Long itemCatId) {
+        this.itemCatId = itemCatId;
     }
 
     public Date getCreated() {

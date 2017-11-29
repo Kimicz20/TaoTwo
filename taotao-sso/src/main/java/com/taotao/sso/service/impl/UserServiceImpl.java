@@ -2,9 +2,9 @@ package com.taotao.sso.service.impl;
 
 import com.taotao.mapper.TbUserMapper;
 import com.taotao.pojo.TaotaoResult;
-import com.taotao.pojo.TbUser;
-import com.taotao.pojo.TbUserExample;
-import com.taotao.pojo.TbUserExample.Criteria;
+import com.taotao.tmp.TbUser;
+import com.taotao.tmp.TbUserExample;
+import com.taotao.tmp.TbUserExample.Criteria;
 import com.taotao.sso.dao.JedisClient;
 import com.taotao.sso.service.UserService;
 import com.taotao.utils.CookieUtils;
