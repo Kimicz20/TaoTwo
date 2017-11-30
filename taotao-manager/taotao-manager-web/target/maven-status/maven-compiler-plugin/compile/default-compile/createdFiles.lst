@@ -1,5 +1,10 @@
+com\taotao\config\DataSourceConfig.class
+com\taotao\config\WebMvcConfig.class
 com\taotao\controller\ContentCategoryController.class
 com\taotao\controller\ItemController.class
-com\taotao\controller\PictureController.class
+com\taotao\config\RootConfig.class
+com\taotao\config\AOPConfig.class
 com\taotao\controller\PageController.class
+com\taotao\controller\PicController.class
 com\taotao\controller\ContentController.class
+com\taotao\WebAppInitializer.class

@@ -7,7 +7,7 @@
           <element id="module-output" name="taotao-portal" />
         </element>
         <element id="directory" name="lib">
-          <element id="archive" name="taotao-common-1.0-SNAPSHOT.jar">
+          <element id="archive" name="taotao-common-1.1.0.jar">
             <element id="module-output" name="taotao-common" />
           </element>
           <element id="library" level="project" name="Maven: joda-time:joda-time:2.5" />
@@ -20,7 +20,7 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.6.4" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.4" />
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.16" />
-          <element id="archive" name="taotao-manager-pojo-1.0-SNAPSHOT.jar">
+          <element id="archive" name="taotao-manager-pojo-1.1.0.jar">
             <element id="module-output" name="taotao-manager-pojo" />
           </element>
           <element id="library" level="project" name="Maven: javax.persistence:persistence-api:1.0" />

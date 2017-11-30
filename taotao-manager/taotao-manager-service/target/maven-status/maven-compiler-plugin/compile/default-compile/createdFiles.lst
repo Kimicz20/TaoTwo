@@ -1,10 +1,11 @@
 com\taotao\service\ItemCatService.class
+com\taotao\service\ItemDescService.class
 com\taotao\service\ItemService.class
-com\taotao\service\impl\ItemServiceImpl.class
-com\taotao\service\impl\PictureServiceImpl.class
+com\taotao\service\PicService.class
+com\taotao\bean\TaoTaoConstant.class
+com\taotao\bean\PicUploadResult.class
 com\taotao\service\ContentCategoryService.class
-com\taotao\service\PictureService.class
 com\taotao\service\impl\ContentCategoryServiceImpl.class
+com\taotao\service\BaseService.class
 com\taotao\service\ContentService.class
 com\taotao\service\impl\ContentServiceImpl.class
-com\taotao\service\impl\ItemCatServiceImpl.class

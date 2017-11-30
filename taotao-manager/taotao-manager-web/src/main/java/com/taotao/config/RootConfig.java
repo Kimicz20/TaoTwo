@@ -18,9 +18,9 @@ import javax.sql.DataSource;
  * Created by geek on 2017/11/29.
  */
 @Configuration
-@EnableTransactionManagement
+@EnableAspectJAutoProxy
 @ComponentScan(basePackages = "com.taotao", excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, value = EnableWebMvc.class)})
-@Import({DruidDataSourceConfig.class})
+@Import({DataSourceConfig.class,AOPConfig.class})
 public class RootConfig {
 
     private final static Logger LOGGER = Logger.getLogger(RootConfig.class);
@@ -52,11 +52,5 @@ public class RootConfig {
                 PIC_FTP_PASSWORD, PIC_FTP_BASEPATH, IMAGE_BASE_URL, REPOSITORY_PATH);
     }
 
-    //事物管理器
-    @Bean(name = "transactionManager")
-    public DataSourceTransactionManager dataSourceTransactionManager(DataSource dataSource) {
-        DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
-        dataSourceTransactionManager.setDataSource(dataSource);
-        return dataSourceTransactionManager;
-    }
+
 }

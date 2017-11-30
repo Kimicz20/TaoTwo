@@ -7,16 +7,16 @@
           <element id="module-output" name="taotao-rest" />
         </element>
         <element id="directory" name="lib">
-          <element id="archive" name="taotao-manager-mapper-1.0-SNAPSHOT.jar">
+          <element id="archive" name="taotao-manager-mapper-1.1.0.jar">
             <element id="module-output" name="taotao-manager-mapper" />
           </element>
-          <element id="archive" name="taotao-manager-pojo-1.0-SNAPSHOT.jar">
+          <element id="archive" name="taotao-manager-pojo-1.1.0.jar">
             <element id="module-output" name="taotao-manager-pojo" />
           </element>
           <element id="library" level="project" name="Maven: javax.persistence:persistence-api:1.0" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.8" />
           <element id="library" level="project" name="Maven: tk.mybatis:mapper:3.3.9" />
-          <element id="archive" name="taotao-common-1.0-SNAPSHOT.jar">
+          <element id="archive" name="taotao-common-1.1.0.jar">
             <element id="module-output" name="taotao-common" />
           </element>
           <element id="library" level="project" name="Maven: joda-time:joda-time:2.5" />

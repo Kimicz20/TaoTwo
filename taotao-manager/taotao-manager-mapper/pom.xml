@@ -3,7 +3,7 @@
     <parent>
         <artifactId>taotao-manager</artifactId>
         <groupId>cn.kimi</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>cn.kimi</groupId>
             <artifactId>taotao-manager-pojo</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.1.0</version>
         </dependency>
 
         <!-- Mybatis -->
@@ -35,6 +35,7 @@
         <dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper</artifactId>
+            <version>3.3.9</version>
             <exclusions>
                 <exclusion>
                     <artifactId>persistence-api</artifactId>
@@ -48,18 +49,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <!-- 如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 -->
-    <build>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-        </resources>
-    </build>
 </project>
