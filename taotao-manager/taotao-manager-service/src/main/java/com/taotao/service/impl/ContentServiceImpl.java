@@ -23,8 +23,8 @@ import java.util.List;
 @Service
 public class ContentServiceImpl implements ContentService {
 
-    @Autowired
-    private TbContentMapper contentMapper;
+//    @Autowired
+//    private TbContentMapper contentMapper;
 
     @Override
     public TaotaoResult saveContent(TbContent content) {
@@ -33,7 +33,7 @@ public class ContentServiceImpl implements ContentService {
         content.setCreated(new Date());
         content.setUpdated(new Date());
         //2.存储数据库
-        contentMapper.insert(content);
+//        contentMapper.insert(content);
 
         //缓存同步
         syncRedisCache(content.getCategoryId());
@@ -48,7 +48,8 @@ public class ContentServiceImpl implements ContentService {
         TbContentExample example =  new TbContentExample();
         Criteria criteria = example.createCriteria();
         criteria.andCategoryIdEqualTo(categoryId);
-        List<TbContent> list = contentMapper.selectByExample(example);
+        List<TbContent> list = null;
+//        contentMapper.selectByExample(example);
 
         //2.分页处理
         PageHelper.startPage(page,rows);
@@ -68,7 +69,7 @@ public class ContentServiceImpl implements ContentService {
         //更新时间修改
         tbContent.setUpdated(new Date());
 
-        contentMapper.updateByPrimaryKey(tbContent);
+//        contentMapper.updateByPrimaryKey(tbContent);
         //缓存同步
         syncRedisCache(tbContent.getCategoryId());
         return TaotaoResult.ok();
@@ -91,8 +92,9 @@ public class ContentServiceImpl implements ContentService {
         //1.查找所属类别
         long  rL = Long.valueOf(tmp[0]);
         criteria.andIdEqualTo(rL);
-        List<TbContent> list = contentMapper.selectByExample(example);
-        long gategoryId = list.get(0).getCategoryId();
+//        List<TbContent> list = contentMapper.selectByExample(example);
+        long gategoryId = 0;
+//        list.get(0).getCategoryId();
 
         //3.数据库删除
         for(String t:tmp){
@@ -100,7 +102,7 @@ public class ContentServiceImpl implements ContentService {
         }
         criteria = example.createCriteria();
         criteria.andIdIn(inList);
-        contentMapper.deleteByExample(example);
+//        contentMapper.deleteByExample(example);
 
         //4.缓存同步
         syncRedisCache(gategoryId);
