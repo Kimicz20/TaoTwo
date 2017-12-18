@@ -3,7 +3,7 @@ package com.taotao.rest.service.impl;
 import com.taotao.pojo.TaotaoResult;
 import com.taotao.rest.dao.JedisClient;
 import com.taotao.rest.service.RedisService;
-import com.taotao.utils.ExceptionUtil;
+import org.tiffy.core.utils.ExceptionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;

@@ -5,7 +5,7 @@ import com.taotao.pojo.EUIDataGridResult;
 import com.taotao.pojo.TaotaoResult;
 import com.taotao.pojo.TbItem;
 import com.taotao.tmp.TbItemParam;
-import com.taotao.utils.IDUtils;
+import org.tiffy.core.utils.IDUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;

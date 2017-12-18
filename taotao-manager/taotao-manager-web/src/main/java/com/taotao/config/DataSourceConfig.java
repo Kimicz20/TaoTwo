@@ -8,10 +8,9 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.transaction.interceptor.TransactionInterceptor;
+import org.tiffy.core.utils.PropertiesUtil;
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
 import javax.sql.DataSource;
@@ -28,6 +27,7 @@ public class DataSourceConfig {
 
     //数据源配置
     @Bean(name = "dataSource", destroyMethod = "close")
+    @Primary
     public DataSource dataSource(
             @Value("${spring.datasource.url}") String dbUrl,
             @Value("${spring.datasource.username}") String username,
@@ -48,6 +48,7 @@ public class DataSourceConfig {
             @Value("${spring.datasource.filters}") String filters,
             @Value("{spring.datasource.connectionProperties}") String connectionProperties
     ) {
+       String a =  PropertiesUtil.getString("spring.datasource.url");
         if (LOGGER.isInfoEnabled()) {
             LOGGER.info("Initialize the data source... dbUrl " + dbUrl);
         }

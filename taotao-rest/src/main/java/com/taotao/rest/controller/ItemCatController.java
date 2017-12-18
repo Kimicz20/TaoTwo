@@ -3,15 +3,12 @@ package com.taotao.rest.controller;
 import com.alibaba.druid.support.json.JSONUtils;
 import com.taotao.rest.pojo.ItemCatsResult;
 import com.taotao.rest.service.ItemCatService;
-import com.taotao.rest.service.impl.ItemCatServiceImpl;
-import com.taotao.utils.JsonUtils;
+import org.tiffy.core.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.awt.*;
 
 /**
  * Created by geek on 2017/6/28.

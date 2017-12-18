@@ -2,15 +2,13 @@ package com.taotao.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.taotao.mapper.TbContentMapper;
 import com.taotao.pojo.EUIDataGridResult;
 import com.taotao.pojo.TaotaoResult;
 import com.taotao.tmp.TbContent;
 import com.taotao.tmp.TbContentExample;
 import com.taotao.tmp.TbContentExample.Criteria;
 import com.taotao.service.ContentService;
-import com.taotao.utils.HttpClientUtil;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.tiffy.core.utils.HttpClientUtil;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

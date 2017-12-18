@@ -2,7 +2,7 @@ package com.taotao.portal.interceptor;
 
 import com.taotao.tmp.TbUser;
 import com.taotao.portal.service.impl.UserServiceImpl;
-import com.taotao.utils.CookieUtils;
+import org.tiffy.core.utils.CookieUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;

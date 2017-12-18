@@ -4,8 +4,8 @@ import com.taotao.pojo.TaotaoResult;
 import com.taotao.tmp.TbContent;
 import com.taotao.portal.pojo.ADItem;
 import com.taotao.portal.service.ContentService;
-import com.taotao.utils.HttpClientUtil;
-import com.taotao.utils.JsonUtils;
+import org.tiffy.core.utils.HttpClientUtil;
+import org.tiffy.core.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 

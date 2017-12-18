@@ -8,7 +8,7 @@ import com.taotao.rest.dao.JedisClient;
 import com.taotao.rest.service.ItemService;
 import com.taotao.tmp.TbItemParamItem;
 import com.taotao.tmp.TbItemParamItemExample;
-import com.taotao.utils.JsonUtils;
+import org.tiffy.core.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;

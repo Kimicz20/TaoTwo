@@ -3,7 +3,7 @@ package com.taotao.portal.service.impl;
 import com.taotao.pojo.SearchResult;
 import com.taotao.pojo.TaotaoResult;
 import com.taotao.portal.service.SearchService;
-import com.taotao.utils.HttpClientUtil;
+import org.tiffy.core.utils.HttpClientUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 

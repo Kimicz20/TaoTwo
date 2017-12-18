@@ -2,17 +2,13 @@ package com.taotao.config;
 
 import com.taotao.bean.TaoTaoConstant;
 import org.apache.log4j.Logger;
-import org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.context.annotation.*;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-
-import javax.sql.DataSource;
+import org.tiffy.core.utils.PropertiesUtil;
 
 /**
  * Created by geek on 2017/11/29.
@@ -50,6 +46,11 @@ public class RootConfig {
     ) {
         return new TaoTaoConstant(IS_FTP_ENABLED, PIC_FTP_HOSTNAME, PIC_FTP_PORT, PIC_FTP_USERNAME,
                 PIC_FTP_PASSWORD, PIC_FTP_BASEPATH, IMAGE_BASE_URL, REPOSITORY_PATH);
+    }
+
+    @Bean(name = "PropertiesUtil")
+    public PropertiesUtil propertiesUtil(){
+        return new PropertiesUtil();
     }
 
 

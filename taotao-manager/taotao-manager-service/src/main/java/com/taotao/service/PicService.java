@@ -2,9 +2,9 @@ package com.taotao.service;
 
 import com.taotao.bean.TaoTaoConstant;
 import com.taotao.bean.PicUploadResult;
-import com.taotao.utils.FtpUtil;
-import com.taotao.utils.IDUtils;
-import com.taotao.utils.JsonUtils;
+import org.tiffy.core.utils.FtpUtil;
+import org.tiffy.core.utils.IDUtils;
+import org.tiffy.core.utils.JsonUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;

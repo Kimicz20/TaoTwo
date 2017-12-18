@@ -20,20 +20,28 @@
 
     <!-- 集中定义依赖版本号 -->
     <properties>
+
+        <!--项目参数-->
         <module.name>${project.artifactId}</module.name>
         <jar.dic>${project.basedir}</jar.dic>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- spring版本号 -->
+        <spring.version>5.0.0.RELEASE</spring.version>
+        <spring-session.version>1.3.1.RELEASE</spring-session.version>
+        <spring-data-redis.version>1.8.7.RELEASE</spring-data-redis.version>
+
+        <!-- 数据库 -->
+        <mysql.version>5.1.39</mysql.version>
+        <sharding-jdbc.version>1.4.1</sharding-jdbc.version>
+
+        <!-- mybatis版本号 -->
+        <mybatis-spring.version>1.3.1</mybatis-spring.version>
+        <mybatis-plus.version>2.1.2</mybatis-plus.version>
         <junit.version>4.12</junit.version>
-        <spring.version>4.1.3.RELEASE</spring.version>
         <!--通用mapper-->
         <mapper.version>3.3.9</mapper.version>
         <mybatis.version>3.2.8</mybatis.version>
-        <mybatis.spring.version>1.2.2</mybatis.spring.version>
-        <mysql.version>5.1.32</mysql.version>
-        <slf4j.version>1.6.4</slf4j.version>
-        <jackson.version>2.4.2</jackson.version>
-        <druid.version>1.0.9</druid.version>
         <httpclient.version>4.3.5</httpclient.version>
         <jstl.version>1.2</jstl.version>
         <servlet-api.version>2.5</servlet-api.version>
@@ -45,8 +53,37 @@
         <pagehelper.version>3.4.2</pagehelper.version>
         <jsqlparser.version>0.9.1</jsqlparser.version>
         <commons-fileupload.version>1.3.1</commons-fileupload.version>
-        <jedis.version>2.7.2</jedis.version>
         <solrj.version>4.10.3</solrj.version>
+
+
+        <!-- log4j日志文件管理包版本 -->
+        <slf4j.version>1.7.9</slf4j.version>
+        <log4j.version>2.8.2</log4j.version>
+        <disruptor.version>3.3.4</disruptor.version>
+        <!-- -->
+        <druid.version>1.1.2</druid.version>
+        <dubbo.version>2.5.5</dubbo.version>
+        <fastjson.version>1.2.36</fastjson.version>
+        <motan.version>0.3.1</motan.version>
+        <!-- -->
+        <redisson.version>3.5.0</redisson.version>
+        <poi.version>3.9</poi.version>
+        <jxl.version>2.6.12</jxl.version>
+        <xfire.version>1.2.6</xfire.version>
+        <jsch.version>0.1.53</jsch.version>
+        <jedis.version>2.9.0</jedis.version>
+        <zxing.version>3.3.0</zxing.version>
+        <zookeeper.version>3.5.3-beta</zookeeper.version>
+        <jackson.version>2.9.0</jackson.version>
+        <shiro.version>1.2.4</shiro.version>
+        <quartz.version>2.2.3</quartz.version>
+        <aspectj.version>1.8.10</aspectj.version>
+        <pinyin4j.version>2.5.1</pinyin4j.version>
+        <activemq.version>5.13.3</activemq.version>
+        <jsqlparser.version>0.9.5</jsqlparser.version>
+        <springfox.version>2.7.0</springfox.version>
+        <swagger.version>1.5.16</swagger.version>
+        <thumbnailator.version>0.4.8</thumbnailator.version>
     </properties>
 
     <!-- 只定义依赖的版本，并不实际依赖 -->
@@ -97,7 +134,7 @@
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis-spring</artifactId>
-                <version>${mybatis.spring.version}</version>
+                <version>${mybatis-spring.version}</version>
             </dependency>
 
             <!--分页助手-->
@@ -174,11 +211,31 @@
             </dependency>
 
 
-            <!-- 日志处理 -->
+            <!-- 日志文件管理包 -->
             <dependency>
                 <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-log4j12</artifactId>
+                <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.17</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j-impl</artifactId>
+                <version>${log4j.version}</version>
             </dependency>
 
 
@@ -224,51 +281,87 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- @TODO -->
+    <profiles>
+        <profile>
+            <id>test</id>
+            <properties>
+                <redis.host>127.0.0.1</redis.host>
+                <zookeeper.address>127.0.0.1:2181</zookeeper.address>
+            </properties>
+        </profile>
+        <profile>
+            <id>product</id>
+            <properties>
+                <redis.host>127.0.0.1</redis.host>
+                <zookeeper.address>127.0.0.1:2181</zookeeper.address>
+            </properties>
+        </profile>
+    </profiles>
+
+
     <build>
         <finalName>${project.artifactId}</finalName>
-        <plugins>
-            <!-- 资源文件拷贝插件 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                    <useDefaultDelimiters>true</useDefaultDelimiters>
-                </configuration>
-            </plugin>
-            <!-- java编译插件 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                    <testIncludes>
-                        <testInclude>none</testInclude>
-                    </testIncludes>
-                </configuration>
-            </plugin>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/**</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
 
-            <!--针对不同的运行环境获得相应的运行包-->
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-war-plugin</artifactId>-->
-                <!--<configuration>-->
-                    <!--<webResources>-->
-                        <!--<resource>-->
-                            <!--&lt;!&ndash; 元配置文件的目录，相对于pom.xml文件的路径 &ndash;&gt;-->
-                            <!--<directory>${jar.dic}/libs</directory>-->
-                            <!--&lt;!&ndash; 目标路径 &ndash;&gt;-->
-                            <!--<targetPath>WEB-INF/lib</targetPath>-->
-                        <!--</resource>-->
-                    <!--</webResources>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
-        </plugins>
         <pluginManagement>
             <plugins>
+                <!-- 资源文件拷贝插件 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <configuration>
+                        <encoding>UTF-8</encoding>
+                        <useDefaultDelimiters>true</useDefaultDelimiters>
+                    </configuration>
+                </plugin>
+                <!-- java编译插件 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.5.1</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <encoding>UTF-8</encoding>
+                        <testIncludes>
+                            <testInclude>none</testInclude>
+                        </testIncludes>
+                    </configuration>
+                </plugin>
+
+                <!--针对不同的运行环境获得相应的运行包-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <configuration>
+                        <webResources>
+                            <resource>
+                                <!-- 正真的配置文件目录 -->
+                                <directory>${jar.dic}/libs</directory>
+                                <!-- 目标路径 -->
+                                <targetPath>WEB-INF/lib</targetPath>
+                                <filtering>true</filtering>
+                            </resource>
+                        </webResources>
+                    </configuration>
+                </plugin>
                 <!-- 配置Tomcat插件 -->
                 <plugin>
                     <groupId>org.apache.tomcat.maven</groupId>

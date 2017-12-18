@@ -1,6 +1,6 @@
 package com.taotao.controller;
 
-import com.taotao.utils.FtpUtil;
+import org.tiffy.core.utils.FtpUtil;
 import org.joda.time.DateTime;
 import org.junit.Test;
 

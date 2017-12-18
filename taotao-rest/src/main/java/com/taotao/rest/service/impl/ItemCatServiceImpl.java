@@ -7,7 +7,7 @@ import com.taotao.rest.dao.JedisClient;
 import com.taotao.rest.pojo.ItemCatNode;
 import com.taotao.rest.pojo.ItemCatsResult;
 import com.taotao.rest.service.ItemCatService;
-import com.taotao.utils.JsonUtils;
+import org.tiffy.core.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
