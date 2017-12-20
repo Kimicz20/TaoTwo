@@ -18,7 +18,7 @@
         <module>taotao-sso</module>
     </modules>
 
-    <!-- 集中定义依赖版本号 -->
+    <!-- 依赖版本号  -->
     <properties>
 
         <!--项目参数-->
@@ -86,7 +86,25 @@
         <thumbnailator.version>0.4.8</thumbnailator.version>
     </properties>
 
-    <!-- 只定义依赖的版本，并不实际依赖 -->
+    <!-- @TODO -->
+    <profiles>
+        <profile>
+            <id>test</id>
+            <properties>
+                <redis.host>127.0.0.1</redis.host>
+                <zookeeper.address>127.0.0.1:2181</zookeeper.address>
+            </properties>
+        </profile>
+        <profile>
+            <id>product</id>
+            <properties>
+                <redis.host>127.0.0.1</redis.host>
+                <zookeeper.address>127.0.0.1:2181</zookeeper.address>
+            </properties>
+        </profile>
+    </profiles>
+
+    <!-- 声明依赖，不引用 -->
     <dependencyManagement>
         <dependencies>
 
@@ -280,25 +298,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <!-- @TODO -->
-    <profiles>
-        <profile>
-            <id>test</id>
-            <properties>
-                <redis.host>127.0.0.1</redis.host>
-                <zookeeper.address>127.0.0.1:2181</zookeeper.address>
-            </properties>
-        </profile>
-        <profile>
-            <id>product</id>
-            <properties>
-                <redis.host>127.0.0.1</redis.host>
-                <zookeeper.address>127.0.0.1:2181</zookeeper.address>
-            </properties>
-        </profile>
-    </profiles>
-
 
     <build>
         <finalName>${project.artifactId}</finalName>
