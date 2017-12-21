@@ -10,7 +10,7 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
-import org.tiffy.core.base.Parameter;
+import org.tiffy.core.base.dao.Parameter;
 
 @Aspect
 @Component

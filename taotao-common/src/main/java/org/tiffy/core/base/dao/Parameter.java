@@ -1,4 +1,4 @@
-package org.tiffy.core.base;
+package org.tiffy.core.base.dao;
 
 import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.toolkit.IdWorker;

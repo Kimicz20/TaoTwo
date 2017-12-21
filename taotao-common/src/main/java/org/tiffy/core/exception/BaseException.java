@@ -5,7 +5,7 @@ package org.tiffy.core.exception;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.ui.ModelMap;
-import org.tiffy.core.support.HttpCode;
+import org.tiffy.core.support.pattern.HttpCode;
 
 /**
  * 

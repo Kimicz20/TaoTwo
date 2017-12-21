@@ -1,5 +1,8 @@
 package org.tiffy.core.utils;
 
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -8,9 +11,6 @@ import java.security.CodeSource;
 import java.security.ProtectionDomain;
 import java.util.Collection;
 import java.util.Map;
-
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * 常见的辅助类
@@ -45,7 +45,7 @@ public final class DataUtil {
 	/**
 	 * 十六进制字符串转十进制字节数组
 	 * 
-	 * @param b
+	 * @param hs
 	 * @return
 	 */
 	public static final byte[] hex2byte(String hs) {

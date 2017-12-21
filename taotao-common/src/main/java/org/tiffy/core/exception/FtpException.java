@@ -1,5 +1,5 @@
 package org.tiffy.core.exception;
-import org.tiffy.core.support.HttpCode;
+import org.tiffy.core.support.pattern.HttpCode;
 
 /**
  * FTP异常

@@ -1,4 +1,4 @@
-package org.tiffy.core.support;
+package org.tiffy.core.support.pattern;
 
 
 import org.tiffy.core.config.Resources;
